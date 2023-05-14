@@ -6,11 +6,13 @@ import AddCustomer from "./components/AddCustomer";
 import DeleteCustomerDialog from "./components/DeleteCustomerDialog";
 import EditCustomer from "./components/EditCustomer";
 import CustomerIntake from "./components/CustomerIntake";
+import ChatForm from "./components/NewJobForm";
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/newjob" element={<ChatForm />}></Route>
         <Route path="/customerIntake" element={<CustomerIntake />}></Route>
         <Route exact path="/" element={<CustomerList />} />
         <Route path="/add-customer" element={<AddCustomer />} />
